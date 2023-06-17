@@ -1,0 +1,62 @@
+
+<div class="outer">
+    <div class="card-container">
+    <div class="landing-form m-3 p-4">
+    <div class="text">
+        <h1><b>CG-AIRLINES</b></h1>
+    </div>
+    <div class="row">
+        <div class="card">
+            <mat-form-field appearance="outline" formControlName="From">
+                <mat-label><b>From</b></mat-label>
+                <mat-select>
+                <mat-option *ngFor="let city of citys" [value]="city">
+                {{city}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+    
+        </div>
+        <div class="card">
+            <mat-form-field appearance="outline">
+                <mat-label><b>To</b></mat-label>
+
+                    <mat-select>
+                    <mat-option *ngFor="let city of citys" [value]="city">
+                    {{city}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card">
+            <mat-form-field appearance="outline">
+            <mat-label><b>Depature</b></mat-label>
+                <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="card">
+            <mat-form-field appearance="outline">     
+            <mat-label><span class="fa fa-user p-2"></span><b>Passengers</b></mat-label> 
+            <mat-select>
+                <mat-option *ngFor="let traveller of travellers" [value]="traveller">
+                {{traveller}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>   
+    </div> 
+
+    <div class="example-button-row">
+    <button routerLink="/airline" mat-flat-button color="Search">Search</button>
+    </div>    
+    </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,27 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.outer {
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+}
+body{
+    height: 100vh; 
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+}
+.ticket{
+    position: relative;
+    width: 320px;
+    top:50%;
+    left:50px;
+    transform: translate(-50% , -50%);
+}
+
+.ticket .card{
+    display: flex;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+}
