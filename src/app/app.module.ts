@@ -29,6 +29,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { PassengersComponent } from './components/passengers/passengers.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 
 
@@ -61,6 +62,7 @@ import { RouterModule } from '@angular/router';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatCardModule,
     RouterModule,
   
     ToastrModule.forRoot({    //Code Modified

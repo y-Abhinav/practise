@@ -36,12 +36,11 @@ table {
     justify-content: space-between;
 
 }
-.from{
-    margin: 10px; 
+.from,
+.to{
+    margin-top: 20px; 
 }
-.search{
-    margin: 10px;
-}
+
 .card{
     display: flex;
     flex-direction: row;
@@ -62,7 +61,65 @@ table {
     color: #1d1212;
     border: 2px #ffff;
 }
-.heading{
+
+.navbar{
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
+
+.flight-list {
+    background-image: url('/assets/images/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  /* Rest of the CSS code remains the same */
+  
+  
+  .flight-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .flight-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .airline-logo {
+    width: 80px;
+    height: 40px;
+    /* Add styling for the airline logo */
+  }
+  
+  .flight-details {
+    margin-left: 10px;
+  }
+  
+  .flight-no {
+    font-weight: bold;
+  }
+  
+  .airline-name {
+    font-size: 16px;
+  }
+  
+  .flight-route {
+    font-size: 14px;
+  }
+  
+  .flight-duration {
+    font-size: 12px;
+    color: #777777;
+  }
+  
+  .flight-price {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  
