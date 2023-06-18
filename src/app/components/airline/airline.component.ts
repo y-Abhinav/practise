@@ -4,6 +4,7 @@ import { TableService } from 'src/app/services/table.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { FormControl, FormGroup } from '@angular/forms';
 
 export interface UserData {
   flightId: string;
@@ -24,6 +25,17 @@ export interface UserData {
   styleUrls: ['./airline.component.scss']
 })
 export class AirlineComponent {
+  public toCitys = ["Hyderabad","Banglore", "Kolkata", "Goa"];
+  public fromCitys = ["Hyderabad","Banglore", "Kolkata", "Goa"];
+  public travellers =[1,2,3];
+
+  
+formData: any = {
+  from: '',
+
+  to: '',
+
+};
 
   displayedColumns: string[] = [
     //'flightId', 
@@ -65,5 +77,58 @@ export class AirlineComponent {
     }
     
   }
+
+  onFromSelectionChange(){
+
+   const value = this.formData.from
+   const arr = ["Hyderabad","Banglore", "Kolkata", "Goa"];
+   this.toCitys = arr.filter(item => item !== value)
+  }
+
+  onToSelectionChange(){
+
+    const value = this.formData.to
+    const arr =["Hyderabad","Banglore", "Kolkata", "Goa"];
+    this.fromCitys = arr.filter(item => item !== value)
+   }
+
+  addSubmit() {
+
+    const fromCity = this.formData.from;
+    const toCity = this.formData.to;
+
+    if(!fromCity){
+      alert("Please select From city!")
+      return
+    }else if(!toCity){
+      alert("Please select to city")
+      return
+    }
+   
+
+    const filteredData = this.posts.filter((ele: any) => {
+      console.log(ele);
+      
+   if( ele.source.toLowerCase().trim() === fromCity.toLowerCase().trim() && ele.destination.toLowerCase().trim() === toCity.toLowerCase().trim()){
+     return ele
+   }
+    })
+
+    console.log(filteredData);
+    
+
+    this.dataSource = new MatTableDataSource(filteredData);
+   
+   
+    // try{
+      
+    // }catch(error){
+    //   alert('Validation Error occurred!')
+    // }
+    
+    
+  
+  }
+  
   
 }

@@ -26,3 +26,36 @@ table {
     cursor: pointer;
     color: black;
 }
+.to{
+    margin: 10px; 
+    display:flex;
+    flex-direction: row ;
+    justify-content: space-between;
+
+}
+.from{
+    margin: 10px; 
+}
+.search{
+    margin: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%; 
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.search button{
+    padding: 12px;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+    border-radius: 12px;
+    color: #1d1212;
+    border: 2px #ffff;
+}
