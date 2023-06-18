@@ -10,6 +10,9 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+.heading{
+align-content: center;
+}
 
 table {
     width: 100%;
@@ -54,8 +57,12 @@ table {
 }
 .search button{
     padding: 12px;
-    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+    background: linear-gradient(to top, #6161e9 50%, #6e6ef6 90%) no-repeat;
     border-radius: 12px;
     color: #1d1212;
     border: 2px #ffff;
+}
+.heading{
+    display: flex;
+    justify-content: center;
 }

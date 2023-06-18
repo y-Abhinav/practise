@@ -16,12 +16,12 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'transaction', component: TransactionComponent},
   {path: 'confirm', component: ConfirmComponent},
-  {path: 'airline', component: AirlineComponent},
+  {path: '', component: AirlineComponent},
   {path:'page', component: CreateLandingPageComponent},
   {path:'price',component:PriceComponent},
   {path:'seat',component:SeatSelectionComponent},
   {path:'passengers',component:PassengersComponent},
-  {path:'**', component: CreateLandingPageComponent},
+  {path:'landing', component: CreateLandingPageComponent},
 ];
 
 @NgModule({
